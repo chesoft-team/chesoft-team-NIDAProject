@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+
+  </script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+<div id="doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ขอเอกสาร</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+    	<ul data-role="listview" data-inset="true">
+        <li>
+          <a href="#add_doc_request">ยื่นขอเอกสาร</a>
+        </li>
+        <li>
+          <a href="#follow_doc_request">ติดตามผลการขอเอกสาร</a>
+        </li>
+        </ul>
+     
+    </div>
+    
+  
+</div>
+
+
+<div id="add_doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+    <a href="#doc_request" data-icon="back" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยื่นขอเอกสาร</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <ul data-role="listview">
+        <li data-role="list-divider">รายการเอกสาร</li>
+        <li><input type="checkbox" id="a" name="check" value="15"><label for="a">Transcript ฉบับผลการศึกษาครบถ้วน</label></li>
+<li><input type="checkbox" id="b" name="check" value="30"><label for="b">Transcript ฉบับไม่รอผลการศึกษาครบถ้วน</label></li>
+<li><input type="checkbox" id="c" name="check" value="30"><label for="c">หนังสือรับรองฉบับรอสภาอนุมัติ (ภาษาไทย)</label></li>
+<li><input type="checkbox" id="d" name="check" value="30"><label for="d">หนังสือรับรองความเป็นนักศึกษา (ภาษาไทย)</label></li>
+<li>
+            <input type="checkbox" id="e" name="check" value="30"><label for="e">หนังสือรับรองทำกิจกรรมนักศึกษา</label></li>
+</ul>
+     
+      
+          <p style="text-align:center">
+             <a href="#doc_request" data-role="button" data-icon="check" data-inline="true" data-mini="true">ถัดไป</a>			
+</p>
+  
+    </div>
+    
+</div>
+
+<div id="pay_doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3 style="margin:0">ชำระเงิน</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+       <img src="http://upload.wikimedia.org/wikipedia/th/thumb/c/ca/BBL_Logo.png/280px-BBL_Logo.png">
+       <p>โปรดชำระเงินภายในวันที่ 30 เมษายน 2558</p>
+        <img src="http://freebarcodefonts.dobsonsw.com/images/code128bar.jpg" width="100%">
+        <li data-role="list-divider">ชำระเงินค่า:
+        <p>ใบผลการเรียน (100 บาท)</p>
+        <p>ใบรับรองความเป็นนักศึกษา (100 บาท)</p>
+        <p>ค่าธรรมเนียมธนาคาร (20 บาท)</p>
+        </li>
+        <li data-role="list-divider">รวมเป็นเงิน 220 บาท</li>
+      </ul>
+      <a href="#doc_request" data-role="button" data-transition="flip">OK</a>
+    </div>
+    
+</div>
+
+<div data-role="page" id="canclerequest">
+  <div data-role="content">
+ 	<h4>ต้องการยกเลิกรายการคำร้องขอเอกสาร 1 กุมภาพันธ์ 2558 ?</h4>
+    <p style="text-align:center">
+  	<a href="#doc_request" data-role="button" data-icon="check"  data-inline="true" data-mini="true">Yes</a>
+	<a href="#doc_request" data-role="button" data-icon="delete" data-inline="true" data-mini="true">No</a>
+    </p>
+  </div>
+</div>
+
+<div id="follow_doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+    <a href="#doc_request" data-icon="back" data-iconpos="notext"></a>
+      <h3 style="margin:0">ติดตามผลการขอเอกสาร</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <ul data-role="listview">
+      	
+        <li data-role="list-divider">รหัส: 00073882 เมื่อ 17/4/2558 11:24</li>
+        <li><p>Transcript ฉบับไม่รอผลการศึกษาครบถ้วน</p>
+        <p>จำนวน 1 ฉบับ</p></li>
+        <li><p>หนังสือรับรองฉบับรอสภาอนุมัติ (ภาษาไทย)</p>
+        <p>จำนวน 1 ฉบับ</p></li>
+      <li data-role="list-divider"><p>ต้องชำระเงินภายในวันที่ 30 มษายน 2556</p>
+        <p><a href="#pay_doc_request" data-role="button">ใบแจ้งยอด</a></p>
+        <p><a href="#" data-role="button">ยกเลิกคำขอ</a></p></li>
+      </ul>
+    </div>
+    
+</div>
+
+</body>
+</html>

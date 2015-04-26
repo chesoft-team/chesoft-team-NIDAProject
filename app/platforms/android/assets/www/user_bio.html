@@ -1,0 +1,146 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+<div id="bio1" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="profile.html">ข้อมูลส่วนตัว</a>
+      <h3 style="margin:0">ประวัตินักศึกษา</h3>
+      </div>
+      
+      <div data-role="content">
+      <ul data-role="listview">
+      <li data-role="list-divider">ข้อมูลการศึกษา</li>
+          <li>
+          <p><strong>รหัสประจำตัว</strong> 5810112060</p>
+           	  <p><strong>ชื่อ-สกุล</strong></p>
+              <p>รุจิรา ผาสุก</p>
+              <p>Rujira  Phasook</p>
+          </li>
+          <li>
+              <p><strong>จังหวัด</strong> กรุงเทพ</p>
+              <p><strong>ระดับ</strong> ปริญญาโทภาคปกติ</p>
+              <p><strong>คณะ</strong> รัฐประศาสนศาสตร์</p>
+              <p><strong>หลักสูตร</strong> การจัดการภาครัฐและภาคเอกชนมหาบัณฑิต</p>
+              <p><strong>สถานภาพนักศึกษา</strong> รักษาสภาพนักศึกษา</p>
+              <p><strong>วันที่รับเข้า</strong> 10/08/2557</p>
+              <p><strong>วันที่จบ/พ้นสภาพ</strong> -</p>
+              <p><strong>อาจารย์ที่ปรึกษา</strong> -</p>
+          </li>          
+        </ul>
+    </div>
+    <a data-role="button" href="#bio2">ถัดไป</a> 
+  </div>
+  
+  <div id="bio2" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="profile.html" data-role="button">ข้อมูลส่วนตัว</a>
+      <h3>ประวัตินักศึกษา</h3>
+      </div>
+      
+      <div data-role="content">
+      <ul data-role="listview">
+      <li data-role="list-divider">ข้อมูลส่วนบุคคล</li>
+          <li>
+          <p><strong>วันเดือนปีเกิด</strong> 13/07/2535</p>
+          </li>          
+           <li>
+           	  <p><strong>ภูมิลำเนาเดิม</strong> กรุงเทพ</p>
+              <p><strong>เชื้อชาติ</strong> ไทย</p>
+              <p><strong>สัญชาติ</strong> ไทย</p>
+              <p><strong>เลขที่บัตรประชาชน</strong> 3100000234589321</p>
+              <p><strong>หมู่โลหิต</strong> A (เอ)</p>
+          </li>                 
+        </ul> 
+    </div>
+    <a data-role="button" href="#bio3">ถัดไป</a> 
+  </div>
+  
+  <div id="bio3" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="profile.html" data-role="button">ข้อมูลส่วนตัว</a>
+      <h3>ประวัตินักศึกษา</h3>
+      </div>
+      
+      <div data-role="content">
+      <ul data-role="listview">
+      <li data-role="list-divider">ข้อมูลที่อยู่</li>
+          <li>
+          <p><strong>อีเมล</strong> <input type="email" name="email" id="email" value=""  /></p>
+          </li>
+          <li data-role="list-divider">ที่อยู่ตามทะเบียนบ้าน</li>         
+           <li>
+           	  <p>41/12 บ้านเอื้ออาทรมีนบุรี ซ.รามอินทรา127</p>
+              <p>มีนบุรี กรุงเทพมหานคร 10510</p>
+              <p>โทร. 0849325398</p>
+          </li> 
+          <li data-role="list-divider">ที่อยู่ปัจจุบัน</li>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="บ้านเลขที่/ซอย/ถนน/หมู่บ้าน" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="แขวง/ตำบล" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="เขต/อำเภอ" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="จังหวัด" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="5" placeholder="รหัสไปรษณีย์" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="15" placeholder="โทรศัพท์" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="10" placeholder="มือถือ" /></p>
+                 
+        </ul> 
+    </div>
+    <a data-role="button" href="#bio4">ถัดไป</a> 
+  </div>
+  
+  <div id="bio4" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html">ข้อมูลส่วนตัว</a>
+      <h3 style="margin:0">ประวัตินักศึกษา</h3>
+      </div>
+      
+      <div data-role="content">
+      <ul data-role="listview">
+      <li data-role="list-divider">สถานะภาพการทำงานในปัจจุบัน</li>
+          <li><p><strong>สถานการณ์ทำงาน</strong></p>
+          <p><select name="selectmenu" id="selectmenu">
+                  <option value="option1">เจ้าหน้าที่หน่วยงานของรัฐ</option>
+                </select></p>
+          </li>          
+          <li><p><strong>ตำแหน่งงาน</strong> <input type="text" name="textinput" id="textinput"  value="นักวิชาการศึกษาปฏิบัติการ" /></p>
+          <p><strong>รายได้เดือนละ</strong> <input type="text" name="textinput" id="textinput"  value="15695"/></p>
+          <p><strong>เป็นบริษัทข้ามชาติใช่หรือไม่</strong> <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ใช่</option>
+                </select></p>
+          <p><strong>ถ้าเป็นบริษัทข้ามชาติ กรุณาระบุสัญชาติของบริษัท(ไม่เกิน 100ตัวอักษร) ถ้าไม่ใช่ใส่เครื่องหมาย " X " *</strong> <input type="text" name="textinput" id="textinput"  value=""/></p>
+          </li>
+          <li><p><strong>ชื่อบริษัท/สถานที่ทำงาน</strong> <input type="text" name="textinput" id="textinput"  value="สถาบันบัณฑิตพัฒนบริหารศาสตร์"/><p>
+          <p><strong>ที่อยู่ (เลขที่,ถนน,หมู่บ้าน)</strong> <input type="text" name="textinput" id="textinput"  value="118 ถนนเสรีไทย"/></p>
+          <p><strong>แขวง/ตำบล</strong> <input type="text" name="textinput" id="textinput"  value="คลองจั่น"/></p>
+          <p><strong>เขต/อำเภอ</strong> <input type="text" name="textinput" id="textinput"  value="บางกะปิ"/></p>
+          <p><strong>จังหวัด</strong> <select name="selectmenu" id="selectmenu">
+                  <option value="option1">กรุงเทพมหานคร</option>
+                </select></p>
+          <p><strong>รหัสไปรษณีย์</strong> <input type="text" name="textinput" id="textinput"  value="10240"/></p>
+          <p><strong>โทรศัพท์</strong> <input type="text" name="textinput" id="textinput"  value="027273368"/></p>
+          <p><strong>โทรสาร</strong> <input type="text" name="textinput" id="textinput"  value=""/></p>
+          </li>
+        </ul>
+    </div>
+    <p style="text-align:center">
+    <a href="#" data-role="button" data-icon="check" data-inline="true" data-mini="true">บันทึก</a>
+    </p>
+  </div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+<div id="part_three" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    
+	<div data-role="content">
+    
+    <div data-role="fieldcontain">
+    <div><h3>ตอนที่ 3: การสมัครงานและการทำงาน (เฉพาะผู้ที่ยังไม่ได้ทำงาน)</h3></div>
+          <div data-role="fieldcontain">
+            <div data-role="fieldcontain">
+                <div>16. สาเหตุที่ท่านยังไม่ได้ทำงาน (โปรดระบุสาเหตุที่สำคัญ 1 ข้อ) *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ยังไม่ประสงค์ทำงาน</option>
+                  <option value="option2">การเรียน การสอน</option>
+                  <option value="option3">ประชุม</option>
+                  <option value="option4">อบรม สัมมนา</option>
+                  <option value="option5">จัดกิจกรรม</option>
+                  <option value="option6">แสดงผลงาน</option>
+                  <option value="option7">จัดงานเลี้ยง</option>
+                  <option value="option8">งานของสถาบัน</option>
+                  <option value="option9">อื่นๆ</option>
+                </select>
+                <div>&nbsp;</div>
+                            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput" />
+                </div>
+                
+                            <div data-role="fieldcontain">
+                <div>17. ท่านมีปัญหาในการหางานทำ หลังสำเร็จการศึกษาหรือไม่ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่มีปัญหา</option>
+                </select>
+                 <div>&nbsp;</div>
+                 <div>&nbsp;</div>
+                 <div>(ถ้ามีปัญหา โปรดระบุปัญหาที่สำคัญที่สุดมา 1 ข้อ)</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">-</option>
+                </select>
+                <div>&nbsp;</div>
+            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput"/>
+            </div>
+
+              <div data-role="fieldcontain">
+                <div>18. การศึกษาต่อ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ต้องการศึกษาต่อ</option>
+                </select>
+                </div>
+               
+                </div>
+        <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#part_four" data-role="button">ต่อไป</a></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+  </div>
+  
+</div>
+
+<div id="part_four" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    
+	<div data-role="content">
+    
+    <div data-role="fieldcontain">
+    <div><h3>ตอนที่ 4: การศึกษาต่อ (เฉพาะผู้ที่ต้องการศึกษาต่อ)</h3></div>
+          <div data-role="fieldcontain">
+            <div data-role="fieldcontain">
+                <div>19. ระบบการศึกษาที่ท่านต้องการต่อ/กำลังศึกษา *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ระดับปริญญาตรี</option>
+                </select>
+                <div>&nbsp;</div>
+                            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput" />
+                </div>
+                
+                            <div data-role="fieldcontain">
+                <div>20. สาขาวิชาที่ท่านต้องการต่อ/กำลังศึกษา *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">สาขาวิชาเดิม</option>
+                </select>
+                 <div>&nbsp;</div>
+                 <div>สาขาวิชา</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)</option>
+                </select>
+            </div>
+
+              <div data-role="fieldcontain">
+                <div>21. ประเภทของสถาบันการศึกษา/มหาวิทยาลัยที่ท่านต้องการศึกษา/กำลังศึกษา *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">รัฐบาล</option>
+                </select>
+                </div>
+                
+                <div data-role="fieldcontain">
+                <div>22. เหตุผลที่ทำให้ท่านตัดสินใจศึกษาต่อ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">เป็นความต้องการของบิดา/มากดา หรือผู้ปกครอง</option>
+                </select>
+                <div>&nbsp;</div>
+                            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput" />
+                </div>
+                
+              <div data-role="fieldcontain">
+                <div>23. ท่านมีปัญหาในการศึกษาต่อหรือไม่ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่มีปัญหา</option>
+                </select>
+                 <div>&nbsp;</div>
+                 <div>&nbsp;</div>
+                 <div>(ถ้ามีปัญหา โปรดระบุปัญหาที่สำคัญที่สุดมา 1 ข้อ)</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">-</option>
+                </select>
+                <div>&nbsp;</div>
+            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput"/>
+            </div>
+               
+                </div>
+        <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#part_five" data-role="button">ต่อไป</a></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+  </div>
+  
+</div>
+
+<div id="part_five" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    
+	<div data-role="content">
+    
+    <div data-role="fieldcontain">
+    <div><h3>ตอนที่ 5: ความพึงพอใจ</h3></div>
+          <div data-role="fieldcontain">
+            <div data-role="fieldcontain">
+                <div>24. ความพึงพอใจในด้านเนื้อหาหลักสูตร *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">น้อยที่สุด</option>
+                </select>
+                </div>
+                
+               <div data-role="fieldcontain">
+                <div>25. ความพึงพอใจด้านอาจารย์ผู้สอนของหลักสูตร *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">น้อยที่สุด</option>
+                </select>
+                 
+            </div>
+
+              <div data-role="fieldcontain">
+                <div>26. ความพึงพอใจด้านอุปกรณ์ สิ่งอำนวยความสะดวกในการเรียนการสอนของหลักสูตร *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">น้อยที่สุด</option>
+                </select>
+                </div>
+                
+               
+                </div>
+        <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#part_six" data-role="button">ต่อไป</a></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+  </div>
+  
+</div>
+
+
+<div id="part_six" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    
+	<div data-role="content">
+    
+    <div data-role="fieldcontain">
+    <div><h3>ตอนที่ 6: ข้อเสนอแนะ</h3></div>
+          <div data-role="fieldcontain">
+          <div>27. ท่านคิดว่าในหลักสูตรของสถาบัน ควรเพิ่มรายวิชาหรือความรู้เรื่องใด *</div>
+            <div data-role="fieldcontain">
+                <div>ภาษาอังกฤษ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+                
+                <div>&nbsp;</div>
+                
+                <div>คอมพิวเตอร์ *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+
+                
+                <div>&nbsp;</div>
+                
+                <div>บัญชี *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+
+                
+                <div>&nbsp;</div>
+                
+                <div>การใช้งานอินเตอร์เน็ท *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+
+                
+                <div>&nbsp;</div>
+                
+                <div>การฝึกปฏิบัติจริง *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+
+                
+                <div>&nbsp;</div>
+                
+                <div>เทคนิคการวิจัย *</div>
+                <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ควรเพิ่ม</option>
+                </select>
+                
+            <div>&nbsp;</div>
+            <div>อื่นๆ</div>
+            <input type="text" name="textinput" id="textinput"/>
+            </div>
+
+                
+
+              <div data-role="fieldcontain">
+                <div>28. ข้อเสนอแนะเกี่ยวกับหลักสูตรและสาขาวิชาที่เรียน</div>
+            <input type="text" name="textinput" id="textinput"/>
+                </div>
+                
+             <div data-role="fieldcontain">
+                <div>29. ข้อเสนอแนะเกี่ยวกับการเรียนการสอน</div>
+            <input type="text" name="textinput" id="textinput"/>
+                </div>
+                
+            <div data-role="fieldcontain">
+                <div>30. ข้อเสนอแนะเกี่ยวกับกิจกรรมพัฒนานักศึกษา</div>
+            <input type="text" name="textinput" id="textinput"/>
+                </div>
+                
+               
+                </div>
+        <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#part_seven" data-role="button">ต่อไป</a></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+  </div>
+  
+</div>
+
+
+<div id="part_seven" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    
+	<div data-role="content">
+    
+    <div data-role="fieldcontain">
+    <div><h3>แบบสอบถามของกองแผนงาน</h3></div>
+          <div data-role="fieldcontain">
+            <div data-role="fieldcontain">
+                  <div>1. แนวคิดและความรู้ทางวิชาการ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio1_0" value="" />
+	      <label for="radio1_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio1_1" value="" />
+	      <label for="radio1_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio1_2" value="" />
+	      <label for="radio1_2">มาก</label>
+          <input type="radio" name="radio1" id="radio1_3" value="" />
+	      <label for="radio1_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>2. ทักษะการนำความรู้ไปประยุกต์ใช้ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio2_0" value="" />
+	      <label for="radio2_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio2_1" value="" />
+	      <label for="radio2_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio2_2" value="" />
+	      <label for="radio2_2">มาก</label>
+          <input type="radio" name="radio1" id="radio2_3" value="" />
+	      <label for="radio2_3">มากที่สุด</label>
+        </fieldset>
+
+
+		<div>3. ทักษะการวิเคราะห์และแก้ปัญหา *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio3_0" value="" />
+	      <label for="radio3_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio3_1" value="" />
+	      <label for="radio3_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio3_2" value="" />
+	      <label for="radio3_2">มาก</label>
+          <input type="radio" name="radio1" id="radio3_3" value="" />
+	      <label for="radio3_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>4. ทักษะการนำเสนอ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio4_0" value="" />
+	      <label for="radio4_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio4_1" value="" />
+	      <label for="radio4_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio4_2" value="" />
+	      <label for="radio4_2">มาก</label>
+          <input type="radio" name="radio1" id="radio4_3" value="" />
+	      <label for="radio4_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>5. ทักษะในการวิจัย *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio5_0" value="" />
+	      <label for="radio5_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio5_1" value="" />
+	      <label for="radio5_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio5_2" value="" />
+	      <label for="radio5_2">มาก</label>
+          <input type="radio" name="radio1" id="radio5_3" value="" />
+	      <label for="radio5_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>6. ทักษะทางภาษาอังกฤษ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio6_0" value="" />
+	      <label for="radio6_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio6_1" value="" />
+	      <label for="radio6_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio6_2" value="" />
+	      <label for="radio6_2">มาก</label>
+          <input type="radio" name="radio1" id="radio6_3" value="" />
+	      <label for="radio6_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>7. ทักษะทางคอมพิวเตอร์ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio7_0" value="" />
+	      <label for="radio7_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio7_1" value="" />
+	      <label for="radio7_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio7_2" value="" />
+	      <label for="radio7_2">มาก</label>
+          <input type="radio" name="radio1" id="radio7_3" value="" />
+	      <label for="radio7_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>8. ทักษะการบริหารจัดการ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio8_0" value="" />
+	      <label for="radio8_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio8_1" value="" />
+	      <label for="radio8_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio8_2" value="" />
+	      <label for="radio8_2">มาก</label>
+          <input type="radio" name="radio1" id="radio8_3" value="" />
+	      <label for="radio8_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>9. ทักษะการทำงานเป็นทีม *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio9_0" value="" />
+	      <label for="radio9_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio9_1" value="" />
+	      <label for="radio9_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio9_2" value="" />
+	      <label for="radio9_2">มาก</label>
+          <input type="radio" name="radio1" id="radio9_3" value="" />
+	      <label for="radio9_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>10. ความเป็นผู้นำ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio10_0" value="" />
+	      <label for="radio10_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio10_1" value="" />
+	      <label for="radio10_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio10_2" value="" />
+	      <label for="radio10_2">มาก</label>
+          <input type="radio" name="radio1" id="radio10_3" value="" />
+	      <label for="radio10_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>11. ความคิดริเริ่มสร้างสรรค์ *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio11_0" value="" />
+	      <label for="radio11_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio11_1" value="" />
+	      <label for="radio11_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio11_2" value="" />
+	      <label for="radio11_2">มาก</label>
+          <input type="radio" name="radio1" id="radio11_3" value="" />
+	      <label for="radio11_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>12. ความมีคุณธรรมและจริยธรรม *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio12_0" value="" />
+	      <label for="radio12_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio12_1" value="" />
+	      <label for="radio12_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio12_2" value="" />
+	      <label for="radio12_2">มาก</label>
+          <input type="radio" name="radio1" id="radio12_3" value="" />
+	      <label for="radio12_3">มากที่สุด</label>
+        </fieldset>
+
+            
+            <div>13. การมีเครือข่ายความสัมพันธ์ระหว่างนักศึกษา *</div>
+	    <fieldset data-role="controlgroup">
+	      <input type="radio" name="radio1" id="radio13_0" value="" />
+	      <label for="radio13_0">น้อยที่สุด</label>
+	      <input type="radio" name="radio1" id="radio13_1" value="" />
+	      <label for="radio13_1">น้อย</label>
+	      <input type="radio" name="radio1" id="radio13_2" value="" />
+	      <label for="radio13_2">มาก</label>
+          <input type="radio" name="radio1" id="radio13_3" value="" />
+	      <label for="radio13_3">มากที่สุด</label>
+        </fieldset>
+
+               
+                </div>
+                </div>
+        <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#part_complete" data-role="button">แสดงความจำนง</a></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+  </div>
+  
+</div>
+
+
+<div id="pay_doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3 style="margin:0">ชำระเงินค่าปริญญาบัตร</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+       <img src="http://upload.wikimedia.org/wikipedia/th/thumb/c/ca/BBL_Logo.png/280px-BBL_Logo.png">
+       <p>โปรดชำระเงินภายในวันที่ 18 สิงหาคม 2558</p>
+        <img src="http://freebarcodefonts.dobsonsw.com/images/code128bar.jpg" width="100%">
+        <li data-role="list-divider">ชำระเงินค่า:
+        <p>ค่าใบปริญญาบัตร</p>
+        <p>เป็นเงิน 1000 บาท</p>
+        <p>ค่าธรรมเนียมธนาคาร (20 บาท)</p>
+        </li>
+        <li data-role="list-divider">รวมเป็นเงิน 1020 บาท</li>
+      </ul>
+      <a href="#doc_request" data-role="button" data-transition="flip">OK</a>
+    </div>
+    
+</div>
+
+
+<div id="part_complete" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+
+	<p>สถาบันขอขอบคุณที่ให้ข้อมูล</p>
+    <p>&nbsp;</p>
+    <p>ระบบทำการบันทึกข้อมูลเสร็จสิ้น</p>
+    <p>นักศึกษาสามารถเลือกเมนูชำระเงินค่าใบปริญญาบัตร</p>
+    <p>ระบบจะแสดงบาร์โค้ดเพื่อนำไปชำระเงินที่ธนาคารได้</p>
+    </div>
+    
+            <div>
+        <table align="center">
+        <tr>
+	    <td><a href="#" data-role="button">ตกลง</a></td>       
+                </tr>
+                </table>
+                </div>
+    
+</div>
+
+  
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>

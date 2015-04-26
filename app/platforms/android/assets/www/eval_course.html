@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+        <title>NIDA: Student Portal</title>
+    </head>
+
+    <body>
+        <div id="eval_course" data-role="page">
+            <div data-role="header" data-position="fixed">
+            <a href="evaluation.html" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+            <div data-role="content">
+                <h4>แบบประเมินผลการจัดการเรียนการสอนของอาจารย์</h4>
+                <table style="width: 80%">
+                    
+                    <tr>
+                        <th style="width:15%; text-align:left; vertical-align:top">วัตถุประสงค์</th><td>&#160;</td> <td>แบบประเมินผลการเรียนการสอนนี้มีวัตถุประสงค์ เพื่อนำข้อมูลไปใช้ประกอบการพิจารณาปรับปรุงและพัฒนาการเรียนการสอน โดยผลการประเมินดังกล่าวไม่มีผลต่อผลการศึกษาท่าน</td>
+                    </tr>
+                    <tr>
+                        <th style="width:15%; text-align:left; vertical-align:top">คำชี้แจง</th><td>&#160;</td> <td>กรุณาทำการประเมินให้ครบทุกรายวิชา/ อาจารย์ หากประเมินไม่ครบจะมีผลต่อการแสดงผลการศึกษาของท่าน</td>
+                    </tr>
+                </table>
+                <a href="#course_1" data-role="button">เริ่มประเมิน</a>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="course_1">
+            <div data-role="header" data-position="fixed">
+                <a href="#eval_course" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+                <div data-role="fieldcontain">
+                    <h4>1. ท่านได้เตรียมตัวก่อนเข้าเรียน</h4>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio1" id="radio1_0" value="" />
+                        <label for="radio1_0">ไม่เคยเลย</label>
+                        <input type="radio" name="radio1" id="radio1_1" value="" />
+                        <label for="radio1_1">บางครั้ง</label>
+                        <input type="radio" name="radio1" id="radio1_2" value="" />
+                        <label for="radio1_2">ทุกครั้ง/สม่ำเสมอ</label>
+                    </fieldset>
+
+                    <a href="#course_2" data-role="button">ถัดไป</a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="course_2">
+            <div data-role="header" data-position="fixed">
+                <a href="#course_1" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+
+                <div data-role="fieldcontain">
+
+                    <h4>2. ท่านได้ทบทวนการเรียนอย่างสม่ำเสมอ</h4>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio1" id="radio2_0" value="" />
+                        <label for="radio2_0">ไม่เคยเลย</label>
+                        <input type="radio" name="radio1" id="radio2_1" value="" />
+                        <label for="radio2_1">บางครั้ง</label>
+                        <input type="radio" name="radio1" id="radio2_2" value="" />
+                        <label for="radio2_2">ทุกครั้ง/สม่ำเสมอ</label>
+                    </fieldset>
+
+                    <a href="#course_3" data-role="button">ถัดไป</a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="course_3">
+            <div data-role="header" data-position="fixed">
+                <a href="#course_2" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+
+                <div data-role="fieldcontain">
+
+                    <h4>3. เมื่อท่านไม่เข้าใจบทเรียน ท่านสอบถามอาจารย์ผู้สอน</h4>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio1" id="radio3_0" value="" />
+                        <label for="radio3_0">ไม่เคยเลย</label>
+                        <input type="radio" name="radio1" id="radio3_1" value="" />
+                        <label for="radio3_1">บางครั้ง</label>
+                        <input type="radio" name="radio1" id="radio3_2" value="" />
+                        <label for="radio3_2">ทุกครั้ง/สม่ำเสมอ</label>
+                    </fieldset>
+
+                    <a href="#course_4" data-role="button">ถัดไป</a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div data-role="page" id="course_4">
+            <div data-role="header" data-position="fixed">
+                <a href="#course_3" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+
+                <div data-role="fieldcontain">
+
+                    <h4>4. เมื่อท่านไม่เข้าใจบทเรียน ท่านศึกษาเพิ่มเติมด้วยตนเอง</h4>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio1" id="radio4_0" value="" />
+                        <label for="radio4_0">ไม่เคยเลย</label>
+                        <input type="radio" name="radio1" id="radio4_1" value="" />
+                        <label for="radio4_1">บางครั้ง</label>
+                        <input type="radio" name="radio1" id="radio4_2" value="" />
+                        <label for="radio4_2">ทุกครั้ง/สม่ำเสมอ</label>
+                    </fieldset>
+
+
+                    <a href="#course_5" data-role="button">ถัดไป</a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div data-role="page" id="course_5">
+            <div data-role="header" data-position="fixed">
+                <a href="#course_4" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+
+                <div data-role="fieldcontain">
+
+                    <h4>5. ท่านได้ทำงานตามที่ได้รับมอบหมาย</h4>
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio1" id="radio5_0" value="" />
+                        <label for="radio5_0">ไม่เคยเลย</label>
+                        <input type="radio" name="radio1" id="radio5_1" value="" />
+                        <label for="radio5_1">บางครั้ง</label>
+                        <input type="radio" name="radio1" id="radio5_2" value="" />
+                        <label for="radio5_2">ทุกครั้ง/สม่ำเสมอ</label>
+                    </fieldset>
+
+                    <a href="#open_course_1" data-role="button">ต่อไป</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="open_course_1">
+            <div data-role="header" data-position="fixed">
+                <a href="#course_5" data-icon="back" rel="external" data-iconpos="notext"></a>
+                <h3 style="margin:0">รอ.6004: องค์การสมัยใหม่<br>ดร.สุจิตรา บุณยรัตพันธุ์</h3>
+            </div>
+
+            <div data-role="content">
+
+
+                <div data-role="fieldcontain">
+
+                    <h4>6. ท่านมีข้อเสนอแนะเพิ่มเติมต่อรายวิชาและอาจารย์หรือไม่</h4>
+                    <fieldset data-role="controlgroup">
+                        <textarea value=""></textarea>
+                    </fieldset>
+
+                    <a href="#confirm_result" data-role="button" data-rel="dialog">บันทึก</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="confirm_result">
+            <div data-role="content">
+                <h3>ท่านต้องการย้อนกลับไปกรอกแบบสอบถามข้อที่ยังไม่ได้กรอกหรือไม่</h3>
+
+                <a href="#open_course_1" data-role="button">ต้องการ</a>
+
+                <a href="#save_result" data-role="button" data-rel="dialog">ไม่ต้องการ</a>
+
+            </div>
+        </div>
+
+        <div data-role="page" id="save_result">
+            <div data-role="content">
+                <h3>ประเมินเรียบร้อยแล้ว</h3>
+                <a href="evaluation.html" data-role="button" rel="external">ปิด</a>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
