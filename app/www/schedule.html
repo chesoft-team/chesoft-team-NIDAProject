@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+<div id="schedule" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ตารางเรียน/สอบ</h3>
+    </div>
+  <div data-role="content">
+<fieldset data-role="controlgroup" data-type="horizontal">
+<legend>ปีการศึกษา</legend>
+<label for="select-choice-year">Year</label>
+		<select name="select-choice-year" id="select-choice-year">
+			<option value="2557">2557</option>
+			<option value="2558">2558</option>
+		</select><label>/</label>
+        <label for="select-choice-term">Term</label>
+		<select name="select-choice-term" id="select-choice-term">
+			<option value="1">1</option>
+			<option value="2">2</option>
+		</select>
+</fieldset>     
+<div data-role="tabs">
+    <div data-role="navbar">
+      <ul>
+          <li><a href="#studyschedule">ตารางเรียน</a></li>
+          <li><a href="#examschedule">ตารางสอบ</a></li>
+      </ul>
+    </div>
+      
+    <div id="studyschedule" data-role="collapsible-set" data-inset="true">
+        
+      <div data-role="collapsible">
+        <h3>จันทร์</h3>
+        <ul data-role="listview">
+          <li><strong>09:00-12:00</strong> บธ.5020: เศรษฐศาสตร์ธุรกิจ
+          <p>ห้อง 603 อาคารสยามบรมราชกุมารี</p>
+          </li>          
+          <li><strong>13:00-14:00</strong> บธ.6300: บัญชีบริหาร
+          <p>ห้อง 804 อาคารสยามบรมราชกุมารี</p>
+          </li>
+          <li><strong>14:00-16:00</strong> บธ.6400: การบริหารการเงิน
+          <p>ห้อง 701 อาคารสยามบรมราชกุมารี</p>
+          </li>
+        </ul>
+	  </div>
+        
+      <div data-role="collapsible">
+        <h3>อังคาร</h3>
+        <ul data-role="listview">
+          <li><strong>13:00-16:00</strong> บธ.5100: การจัดการร่วมสมัย</li>          
+        </ul>
+	  </div>
+        
+      <div data-role="collapsible">
+        <h3>พุธ</h3>
+        <ul data-role="listview">
+          <li><strong>10:00-12:00</strong> บธ.6500: การบริหารการปฏิบัติการ</li>   
+          <li><strong>12:00-13:00</strong> -</li>
+          <li><strong>13:00-16:00</strong> บธ.5020: เศรษศาสตร์ธุรกิจ</li>       
+        </ul>
+	  </div>
+        
+      <div data-role="collapsible">
+        <h3>พฤหัสบดี</h3>
+        <ul data-role="listview">
+          <li><strong>09:00-12:00</strong> บธ.5100: การจัดการร่วมสมัย</li>       
+        </ul>
+	  </div>
+        
+      <div data-role="collapsible">
+        <h3>ศุกร์</h3>
+        <ul data-role="listview">
+          <li><strong>09:00-10:00</strong> บธ.5060: ประเด็นทางกฏหมายในการดำเนินธุรกิจ</li>   
+          <li><strong>10:00-11:00</strong> -</li>
+          <li><strong>11:00-12:00</strong> บธ.5080: ภาษาอังกฤษเพื่อการสื่อสารทางธุรกิจ</li>    
+          <li><strong>12:00-13:00</strong> -</li>
+          <li><strong>13:00-16:00</strong> บธ.6300: บัญชีบริหาร</li>  
+        </ul>
+	  </div>
+      </div>  
+        
+      <div id="examschedule" data-role="collapsible-set">
+        
+        <div data-role="collapsible">
+          <h3>จ. 18 พฤษภาคม 2558</h3>
+          <ul data-role="listview">
+          <li><strong>09:00-12:00</strong> บธ.5020: เศรษฐศาสตร์ธุรกิจ</li>   
+          <li><strong>12:00-13:00</strong> -</li>
+          <li><strong>13:00-16:00</strong> บธ.6300: บัญชีบริหาร</li>  
+        </ul>
+		</div>
+                
+        <div data-role="collapsible">
+          <h3>พฤ. 21 พฤษภาคม 2558</h3>
+          <ul data-role="listview">
+          <li><strong>13:00-16:00</strong> บธ.6400: การบริหารการเงิน</li>  
+        </ul>
+		</div>
+
+      </div>
+        
+            
+    </div>
+    
+</div>
+
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  
+  <script>
+  function RegAll() {
+	
+	
+	
+	$('#tst2').append($('#tst1').html());
+	$("#tst1").remove();
+
+}
+
+function CancelRegAll() {
+	
+	
+	
+	$('#tst1').append($('#tst2').html());
+	$("#tst2").remove();
+
+}
+
+function TransferToConfirm() {
+	
+	
+	
+	$('#tst3').html($('#tst2').html());
+	$("#tst3 td:last-child").remove();
+
+}
+
+    
+function Move(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+				
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst1');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst2');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(2);
+				
+				var newcell=tr.insertCell(2);
+				newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+
+    }
+    else 
+    {       
+                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+
+function CancelMove(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst2');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst1');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(2);
+				                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+    }
+    else 
+    {       
+
+                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+  </script>
+<title>Untitled Document</title>
+</head>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+<div id="qtest_register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">สอบประมวลความรู้</h3>
+    </div>
+    
+   <div role="main" class="ui-content">
+    <div data-role="tabs">
+      <div data-role="navbar">
+      <ul>
+          <li><a href="#qtest_regis">ลงทะเบียน</a></li>
+          <li><a href="#qtest_result">ผลการสอบ</a></li>
+      </ul>
+      </div>
+      
+      
+      <div id="qtest_regis">
+    	<ul data-role="listview" data-inset="true">
+        <li data-icon="plus">
+          <a href="#qtest_new_regis">ลงทะเบียนสอบประมวลความรู้</a>
+        </li>
+        </ul>
+        <div>&nbsp;</div>
+      <div data-role="list-divider"><h4>รายการลงทะเบียนสอบที่ยังไม่ได้ชำระเงิน</h4></div>
+          <table  bgcolor="#FFFFFF" width="100%">
+          	<tr>
+                <td align="left">สอบวันที่ 28 เมษายน 2558</td>
+                <td>
+                	<div data-role="navbar">
+                          <ul>
+                          <li>
+                              <a href="#pay_doc_request"  data-transition="flip">ชำระเงิน</a>
+                          </li>
+                          <li>
+                              <a href="#">ยกเลิก</a>
+                          </li>
+                          </ul>
+                    </div>
+                </td>
+            </tr>
+            
+            
+          </table>
+
+      
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+    <div id="qtest_result">
+        
+      <div data-role="content" data-inset="true">
+        <div data-role="collapsible-set" data-inset="true">
+        <div data-role="list-divider"><h5>รายวิชา</h5></div>
+        <div data-role="collapsible">
+        <h4>24 ตุลาคม 2557</h4>
+        <table>
+        <tr>
+        	<td align="left">บธ.5020: เศรษฐศาสตร์ธุรกิจ</th>
+            <td>&nbsp;&nbsp;</td>
+            <th>ผ่าน<td>
+        </tr>
+        <tr>
+        	<td align="left">บธ.6300: บัญชีบริหาร</th>
+            <td>&nbsp;&nbsp;</td>
+            <th>ไม่ผ่าน<td>
+        </tr>
+        </table>
+        </div>
+        <div data-role="collapsible">
+        <h4>18 มกราคม 2558</h4>
+                <table>
+        <tr>
+        	<td align="left">บธ.6400: การบริหารการเงิน</th>
+            <td>&nbsp;&nbsp;</td>
+            <th>ผ่าน<td>
+        </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+      
+      </div>
+    
+
+    
+    </div>
+    
+  
+
+
+
+
+<div id="qtest_new_regis" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ลงทะเบียนสอบประมวลความรู้</h3>
+    </div>
+    
+   <div role="main" class="ui-content">
+<div data-role="content">
+          <form>
+      <input id="filterTable-input" data-type="search" placeholder="ค้นหาวิชาที่ต้องการสอบ...">
+    </form>
+      <table data-filter="true" data-input="#filterTable-input" width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst1" >
+          <tr class="productitm1" align="center" height="40">
+
+            <td>บธ.5020</td>
+            <td>เศรษฐศาสตร์ธุรกิจ</td>
+            <td><button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button></td>
+          </tr>
+          <tr class="productitm2" align="center" height="40">
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td><button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button></td>
+          </tr>
+          <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6400</td>
+            <td>การบริหารการเงิน</td>
+            <td><button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button></td>
+          </tr>
+          </tbody>
+  
+      </table>
+      </div>
+      
+            <div data-role="content">
+            <label>รายวิชาที่ต้องการสอบ</label>
+      <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="forth" width="35%" align="center"><button type="button" style="width: 60%" onClick="CancelRegAll()">ยกเลิกทุกวิชา</button></th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst2" >
+          <tr class="productitm1" align="center" height="40">
+
+            <td>บธ.5020</td>
+            <td>เศรษฐศาสตร์ธุรกิจ</td>
+            <td><button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button></td>
+          </tr>
+          <tr class="productitm2" align="center" height="40" >
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td><button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button></td>
+          </tr>
+          <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6400</td>
+            <td>การบริหารการเงิน</td>
+            <td><button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button></td>
+          </tr>
+          </tbody>
+  
+      </table>
+      </div>
+      
+      <a href="#confirm_register" style="width: 88.5%" onClick="TransferToConfirm()">ลงทะเบียนสอบ</a>
+      
+      </div>
+     </div>
+      
+      <div id="reg_total" data-role="collapsible-set" data-inset="true">
+
+      <table id="cart" width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" height="40">
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr class="productitm1" align="center" height="40">
+
+            <td>บธ.5020</td>
+            <td>เศรษฐศาสตร์ธุรกิจ</td>
+          </tr>
+          <tr class="productitm2" align="center" height="40">
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+          </tr>
+          <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6400</td>
+            <td>การบริหารการเงิน</td>
+          </tr>
+          </tbody>
+  
+      </table>
+
+      
+      </div>
+      
+
+
+
+<div id="confirm_register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยืนยันการลงทะเบียนสอบ</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+    <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst3">
+         </tbody>
+         
+         </table>
+    </div>
+    
+      <div data-role="navbar" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#complete_register">ยืนยัน</a></li>
+          <li><a href="#qtest_new_regis">ยกเลิก</a></li>
+          </ul>
+      </div>
+    
+</div>
+
+
+<div id="complete_register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยืนยันการลงทะเบียนสอบ</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+    <p></p>
+    <p>ลงทะเบียนเรียบร้อย</p>
+    <p></p>
+    </div>
+    
+      <ul data-role="navbar" data-inset="true">
+          <a href="#qtest_register" style="width: 88.5%">กลับสู่หน้าหลัก</a>
+      </ul>
+    
+</div>
+
+
+      
+</div>
+
+
+<div id="pay_doc_request" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <h3 style="margin:0">ชำระเงิน</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+       <img src="http://upload.wikimedia.org/wikipedia/th/thumb/c/ca/BBL_Logo.png/280px-BBL_Logo.png">
+       <p>โปรดชำระเงินภายในวันที่ 15 มีนาคม 2558</p>
+        <img src="http://freebarcodefonts.dobsonsw.com/images/code128bar.jpg" width="100%">
+        <li data-role="list-divider">ชำระเงินค่า:
+        <p>สอบประมวลความรู้</p>
+        <p>วันที่ 28 เมษายน 2558</p>
+        <p>เป็นเงิน 500 บาท</p>
+        <p>ค่าธรรมเนียมธนาคาร (20 บาท)</p>
+        </li>
+        <li data-role="list-divider">รวมเป็นเงิน 520 บาท</li>
+      </ul>
+      <a href="#doc_request" data-role="button" data-icon="back" data-transition="flip">OK</a>
+    </div>
+    
+</div>
+
+</body>
+</html>

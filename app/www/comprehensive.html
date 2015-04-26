@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  
+  <script>
+  function RegAll() {
+	
+	
+	
+	$('#tst2').append($('#tst1').html());
+	$("#tst1").remove();
+
+}
+
+function CancelRegAll() {
+	
+	
+	
+	$('#tst1').append($('#tst2').html());
+	$("#tst2").remove();
+
+}
+
+function TransferToConfirm() {
+	
+	
+	
+	$('#tst3').html($('#tst2').html());
+	$("#tst3 td:last-child").remove();
+
+}
+
+    
+function Move(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+				
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst1');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst2');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(2);
+				
+				var newcell=tr.insertCell(2);
+				newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+
+    }
+    else 
+    {       
+                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+
+function CancelMove(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst2');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst1');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(2);
+				                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+    }
+    else 
+    {       
+
+                var newcell=tr.insertCell(2);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+  </script>
+
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+    <div id="compre_exam" data-role="page">
+        <div data-role="header" data-position="fixed">
+      <a href="main.html" rel="external" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">สอบประมวลความรู้</h3>
+    </div>
+        
+      <div data-role="content" data-inset="true">
+      
+        <ul data-role="listview">
+          <li data-role="list-divider">ประวัติการสมัครสอบ</li>
+          <li><strong>การสอบ:</strong> สอบประมวลความรู้ MPA กทม.</li>   
+          <li><strong>ครั้งที่:</strong> 1</li>
+          <li><strong>ปีการศึกษา:</strong> 1/2556</li>
+          <li><strong>ผล:</strong> ไม่ผ่าน (22/08/2556)</li>
+        </ul>
+      </div>
+      <a data-role="button" href="#register">สมัครสอบ</a>
+    </div>
+    
+        <div id="register" data-role="page">
+        <div data-role="header" data-position="fixed">
+      <a href="#compre_exam" data-icon="back" data-iconpos="notext"></a>
+      <h3 style="margin:0">เลือกรายการสอบประมวลความรู้</h3>
+    </div>
+        
+      <div data-role="content" data-inset="true">
+<h5>เลือกหมายเลขครั้งที่ เพื่อสมัครสอบ</h5>
+        <table width="100%" bgcolor="#FFFFFF" cellspacing="0" align="center">
+        <thead bgcolor="#E0D9D9"> 
+        <tr>
+        	<th align="left">การสอบ</th>
+            <th align="left">ครั้งที่</th>
+            <th align="left">ปีการศึกษา</th>
+            <th align="left">ช่วงวันที่เปิดรับสมัคร</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr>
+        	<td>สอบประมวลความรู้ MPA กทม.</td>
+            <td><a href="#confirm_register" data-role="button">2</a></td>
+            <td>2556</td>
+            <td>16 กันยายน - 7 ตุลาคม 2556</td>
+        </tr>
+        </tbody>
+        </table>
+      
+      </div>
+    </div>
+    
+            <div id="confirm_register" data-role="page">
+        <div data-role="header" data-position="fixed">
+      <a href="#register" data-icon="back" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยืนยันการสมัครสอบ</h3>
+    </div>
+        
+      <div data-role="content" data-inset="true">
+<h5>ถ้าท่านต้องการสมัครสอบกรุณายืนยันการสมัครสอบ และกดปุ่มสมัครสอบ</h5>
+        <fieldset data-role="controlgroup">
+	      <input type="checkbox" name="radio1" id="radio5_0" value="" />
+	      <label for="radio5_0">ยืนยันการสมัครสอบ</label>
+        </fieldset>
+        
+              <ul data-role="navbar" data-inset="true" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#last_register" data-rel="dialog">สมัครสอบ</a></li>
+      </ul>
+      </ul>
+
+      </div>
+    </div>
+    
+    <div id="last_register" data-role="page">
+        <div data-role="header" data-position="fixed">
+      <h3 style="margin:0">ยืนยันการสมัครสอบ</h3>
+    </div>
+        
+      <div data-role="content" data-inset="true">
+<h5>ท่านต้องการสมัครสอบหรือไม่</h5>
+        
+              <ul data-role="navbar" data-inset="true" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#complete">ต้องการ</a></li>
+          <li><a href="#compre_exam">ยกเลิก</a></li>
+      </ul>
+      </ul>
+
+      </div>
+    </div>
+
+
+        <div id="complete" data-role="page">
+        <div data-role="header" data-position="fixed">
+      <a href="main.html" rel="external" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">สถานะการสมัครสอบ</h3>
+    </div>
+        
+      <div data-role="content" data-inset="true">         
+        <ul data-role="listview">
+          <li><strong>การสอบ:</strong> สอบประมวลความรู้ MPA กทม.</li>   
+          <li><strong>ครั้งที่:</strong> 2</li>
+          <li><strong>รอบที่:</strong> 1/2556</li>
+          <li><strong>สถานะ:</strong> ยังไม่ชำระเงินค่าสมัครสอบ</a>
+          <p>ต้องชำระเงินระหว่างวันที่ 22-30 ธันวาคม 2556</p>
+          <p><a href="#" data-role="button">ใบแจ้งยอด</a></p>
+          </li>
+        </ul>
+
+      
+      
+      
+      </div>
+    </div>
+
+</body>
+</html>

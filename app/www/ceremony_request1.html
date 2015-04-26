@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+<div id="part_three" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+      
+      <div data-role="content">
+      <div><h3>ตอนที่ 1: ข้อมูลนักศึกษา</h3></div>
+      <ul data-role="listview">
+      <li data-role="list-divider">ข้อมูลที่อยู่ หากมีการเปลี่ยนแปลง<br/> โปรด Update ข้อมูล</li>
+          <li data-role="list-divider">ที่อยู่ปัจจุบัน</li>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="บ้านเลขที่/ซอย/ถนน/หมู่บ้าน" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="แขวง/ตำบล" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="เขต/อำเภอ" /></p>
+          <p><input type="text" name="textinput" id="textinput" value="" placeholder="จังหวัด" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="5" placeholder="รหัสไปรษณีย์" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="15" placeholder="โทรศัพท์" /></p>
+          <p><input type="text" name="number" id="number" value="" maxlength="10" placeholder="มือถือ" /></p>
+                 
+        </ul> 
+    </div>
+    <a data-role="button" href="#cere2">บันทึก</a> 
+  </div>
+  
+  <div id="cere2" data-role="page">
+    <div data-role="header" data-position="fixed">
+      
+      <h3 style="margin:0">แสดงความจำนงรับปริญญา</h3>
+    </div>
+      
+      <div data-role="content">
+      <div><h3>ตอนที่ 2: การสมัครงานและการทำงาน (สำหรับผู้มีงานทำแล้ว)</h3></div>
+      <ul data-role="listview">
+      <li data-role="list-divider">สถานะภาพการทำงานในปัจจุบัน</li>
+          <li><p><strong>สถานการณ์ทำงาน</strong></p>
+          <p><select name="selectmenu" id="selectmenu">
+                  <option value="option1">เจ้าหน้าที่หน่วยงานของรัฐ</option>
+                </select></p>
+          </li>          
+          <li><p><strong>ตำแหน่งงาน</strong> <input type="text" name="textinput" id="textinput"  value="นักวิชาการศึกษาปฏิบัติการ" /></p>
+          <p><strong>รายได้เดือนละ</strong> <input type="text" name="textinput" id="textinput"  value="15695"/></p>
+          <p><strong>เป็นบริษัทข้ามชาติใช่หรือไม่</strong> <select name="selectmenu" id="selectmenu">
+                  <option value="option1">ไม่ใช่</option>
+                </select></p>
+          <p><strong>ถ้าเป็นบริษัทข้ามชาติ กรุณาระบุสัญชาติของบริษัท(ไม่เกิน 100ตัวอักษร) ถ้าไม่ใช่ใส่เครื่องหมาย " X " *</strong> <input type="text" name="textinput" id="textinput"  value=""/></p>
+          </li>
+          <li><p><strong>ชื่อบริษัท/สถานที่ทำงาน</strong> <input type="text" name="textinput" id="textinput"  value="สถาบันบัณฑิตพัฒนบริหารศาสตร์"/><p>
+          <p><strong>ที่อยู่ (เลขที่,ถนน,หมู่บ้าน)</strong> <input type="text" name="textinput" id="textinput"  value="118 ถนนเสรีไทย"/></p>
+          <p><strong>แขวง/ตำบล</strong> <input type="text" name="textinput" id="textinput"  value="คลองจั่น"/></p>
+          <p><strong>เขต/อำเภอ</strong> <input type="text" name="textinput" id="textinput"  value="บางกะปิ"/></p>
+          <p><strong>จังหวัด</strong> <select name="selectmenu" id="selectmenu">
+                  <option value="option1">กรุงเทพมหานคร</option>
+                </select></p>
+          <p><strong>รหัสไปรษณีย์</strong> <input type="text" name="textinput" id="textinput"  value="10240"/></p>
+          <p><strong>โทรศัพท์</strong> <input type="text" name="textinput" id="textinput"  value="027273368"/></p>
+          <p><strong>โทรสาร</strong> <input type="text" name="textinput" id="textinput"  value=""/></p>
+          </li>
+        </ul>
+    </div>
+    <p style="text-align:center">
+    <a href="#" data-role="button" data-icon="check" data-inline="true" data-mini="true">บันทึก</a>
+    </p>
+  </div>
+</body>
+</html>

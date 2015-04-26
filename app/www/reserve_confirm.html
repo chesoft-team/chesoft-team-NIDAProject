@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+  <!-- Page: room_reservation  -->
+<div id="room_reservation" data-role="page">
+    <div data-role="header" data-position="fixed">
+    	
+      <h3 style="margin:0">ห้องสควอซ</h3>
+      <a href="reserve_choose.html" data-icon="delete" class="ui-btn-right" rel="external" data-iconpos="notext"></a>
+    </div>
+    
+	<div data-role="content">
+    	<div data-role="fieldcontain">
+    
+          <div data-role="fieldcontain">
+            <label for="textinput">ผู้จอง:</label>
+            <input type="text" name="textinput" id="textinput" value="กฤติกร ดีชาญเดช" disabled="disabled" />
+            </div>
+            <div data-role="fieldcontain">
+              <label for="textinput2">เบอร์ที่ติดต่อ:</label>
+              <input type="text" name="textinput2" id="textinput2" value="0849454588" disabled="disabled" />
+              </div>
+              <div data-role="fieldcontain">
+                <label for="selectmenu" class="select">วัตถุประสงค์การจอง:</label>
+                <select name="selectmenu" id="selectmenu" disabled>
+                  <option value="option1">เล่นกีฬา</option>
+                  <option value="option2">การเรียน การสอน</option>
+                  <option value="option3">ประชุม</option>
+                  <option value="option4">อบรม สัมมนา</option>
+                  <option value="option5">จัดกิจกรรม</option>
+                  <option value="option6">แสดงผลงาน</option>
+                  <option value="option7">จัดงานเลี้ยง</option>
+                  <option value="option8">งานของสถาบัน</option>
+                  <option value="option9">อื่นๆ</option>
+                </select>
+                </div>
+                <div data-role="fieldcontain">
+                  <label for="selectmenu2" class="select">เวลาเริ่มต้น:</label>
+                  <select name="selectmenu2" id="selectmenu1" disabled>
+                    <option value="option2">18:00</option>                   
+                  </select>
+                  </div>
+                <div data-role="fieldcontain">
+                  <label for="selectmenu2" class="select">เวลาสิ้นสุด:</label>
+                  <select name="selectmenu2" id="selectmenu2" disabled>
+                    <option value="option1">10:00</option>
+                    <option value="option2">11:00</option>
+                    <option value="option3">12:00</option>
+                    <option value="option4">13:00</option>
+                    <option value="option5">14:00</option>
+                    <option value="option6">15:00</option>
+                    <option value="option7">16:00</option>
+                    <option value="option8">17:00</option>
+                    <option value="option9">18:00</option>
+                    <option value="option10" selected>19:00</option>
+                    <option value="option11">20:00</option>
+                  </select>
+                  </div>
+                  <div data-role="fieldcontain">
+                    <label for="number">จำนวนคน:</label>
+                    <input type="number" name="number" id="number" value="1" min="1" disabled="disabled"/>
+                    
+                  </div>
+                  
+                  <div data-role="controlgroup" data-type="horizontal" style="text-align:center">
+                      <a href="reservation_home.html" data-role="button">ยืนยัน</a>&nbsp;&nbsp;
+                      <a href="reservation_home.html" data-role="button">ยกเลิก</a>
+                  </div>
+              </div>    
+                  
+                  
+          </div>
+        
+      </div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

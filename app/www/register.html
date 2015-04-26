@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  
+<script>
+
+function RegAll() {
+	
+	
+	
+	$('#tst2').append($('#tst1').html());
+	$("#tst1").remove();
+
+}
+
+function CancelRegAll() {
+	
+	
+	
+	$('#tst1').append($('#tst2').html());
+	$("#tst2").remove();
+
+}
+
+function TransferToConfirm() {
+	
+	
+	
+	$('#tst3').html($('#tst2').html());
+	$("#tst3 td:last-child").remove();
+
+}
+
+    
+function Move(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+				
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst1');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst2');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(3);
+				
+				var newcell=tr.insertCell(3);
+				newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+
+    }
+    else 
+    {       
+                var newcell=tr.insertCell(3);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="CancelMove(this,1)">ยกเลิก</button>';
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+
+function CancelMove(tr,cell)
+{
+    while (tr.parentNode&&tr.nodeName.toUpperCase()!='TR')
+    {
+        tr=tr.parentNode;
+    }
+    var table1=document.getElementById('tst2');
+    if (!this.rows)
+    {
+        var rows=table1.getElementsByTagName('TR');
+        this.rows=[];
+        for (var z0=0;z0<rows.length;z0++)
+        {
+            this.rows[z0]=rows[z0];
+        }
+    }
+    var table2=document.getElementById('tst1');
+    if (tr.parentNode!=table2)
+    {
+        table2.appendChild(tr);
+        
+
+                tr.deleteCell(3);
+				                var newcell=tr.insertCell(3);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+    }
+    else 
+    {       
+
+                var newcell=tr.insertCell(3);
+                newcell.innerHTML='<button type="button" style="width: 60%" onclick="Move(this,1)">ลงทะเบียน</button>';
+
+        
+        table1.appendChild(tr);
+                
+        for (var z0=0;z0<this.rows.length;z0++)
+        {
+            if (this.rows[z0].parentNode==table1)
+            {
+                table1.appendChild(this.rows[z0]);
+            }
+        }
+    }
+}
+
+</script>
+
+  <title>NIDA: Student Portal</title>
+</head>
+
+<body>
+
+
+
+<div id="register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ลงทะเบียนเรียน</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+      
+      
+      <div id="reg_subject" data-role="collapsible-set" data-inset="true">
+      
+<!--      <div data-role="list-divider"><h2>รายวิชาแต่ละวัน</h2></div>-->
+
+            <div data-role="content">
+            <label>รายวิชาที่ต้องการลงทะเบียน</label>
+            
+      <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst2" >
+          <tr class="productitm2" align="center" height="30" >
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td>3</td>
+          </tr>
+          <tr class="productitm3" align="center" height="30">
+
+            <td>บธ.6400</td>
+            <td>การบริหารการเงิน</td>
+            <td>3</td>
+          </tr>
+          </tbody>
+         </table>
+  <p></p>
+      <table bgcolor="#FFFFFF" cellspacing="0">
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		หน่วยกิตรวม 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	6
+        </td>
+        </tr>
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		จำนวนเงินที่ต้องจ่าย 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	7800 บาท
+        </td>
+        </tr>
+       </table>
+
+		<table>
+        <tr>
+        <td>
+            <button type="button" onClick="">ดึงรายวิชาจากแผน</button>
+        </td>
+        <td>&nbsp;</td>	
+        <td><button type="button" onClick="CancelRegAll()">ยกเลิกทุกวิชา</button></td>
+            </tr>
+            </table>
+      </div>
+      
+
+      
+      <div data-role="content">
+          <form>
+      <input id="filterTable-input" data-type="search" placeholder="ค้นหาวิชาที่ต้องการลงทะเบียน...">
+    </form>
+      <table data-filter="true" data-input="#filterTable-input" width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst1" >
+          <tr class="productitm1" align="center" height="30">
+
+            <td>บธ.5020</td>
+            <td>เศรษฐศาสตร์ธุรกิจ</td>
+            <td>2</td>
+          </tr>
+
+
+          </tbody>
+  
+      </table>
+      
+      		<table>
+        <tr>
+        <td>
+            <button type="button" onClick="RegAll()">เลือกทุกวิชา</button>
+        </td>
+        
+            </tr>
+            </table>
+      
+      
+      
+      </div>
+      
+
+      
+      <ul data-role="navbar" data-inset="true">
+          <a href="#confirm_register" onClick="TransferToConfirm()" style="width: 88.5%">ลงทะเบียน</a>
+      </ul>
+      
+      </div>
+      
+      
+<!--      <div id="reg_total" data-role="collapsible-set" data-inset="true">
+
+      <table id="cart" width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" height="40">
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr class="productitm1" align="center" height="40">
+
+            <td>บธ.5020</td>
+            <td>เศรษฐศาสตร์ธุรกิจ</td>
+            <td>2</td>
+          </tr>
+          <tr class="productitm2" align="center" height="40">
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td>3</td>
+          </tr>
+          <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6400</td>
+            <td>การบริหารการเงิน</td>
+            <td>3</td>
+          </tr>
+          </tbody>
+  
+      </table>
+
+      
+      </div>-->
+      
+      
+    </div>
+    
+</div>
+
+
+<div id="confirm_register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยืนยันการลงทะเบียนเรียน</h3>
+    </div>
+    
+    <div role="main" class="ui-content">
+    <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+          </tr>
+        </thead>
+        
+         <tbody id="tst3">
+         </tbody>
+         
+         </table>
+         
+         <p></p>
+               <table bgcolor="#FFFFFF" cellspacing="0">
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		หน่วยกิตรวม 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	6
+        </td>
+        </tr>
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		จำนวนเงินที่ต้องจ่าย 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	7800 บาท
+        </td>
+        </tr>
+       </table>
+    </div>
+    
+    
+      <div data-role="navbar" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#complete_register">ยืนยัน</a></li>
+          <li><a href="#register">ยกเลิก</a></li>
+          </ul>
+      </div>
+    
+</div>
+
+
+<div id="complete_register" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ยืนยันการลงทะเบียนเรียน</h3>
+    </div>
+    
+        <div role="main" class="ui-content">
+    <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+            <th class="forth">ผลการลงทะเบียน</th>
+          </tr>
+        </thead>
+        
+         <tbody>
+                   <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td>3</td>
+            <th>ได้</td>
+          </tr>
+         </tbody>
+         
+         </table>
+         
+                  <p></p>
+               <table bgcolor="#FFFFFF" cellspacing="0">
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		หน่วยกิตรวม 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	6
+        </td>
+        </tr>
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		จำนวนเงินที่ต้องจ่าย 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	7800 บาท
+        </td>
+        </tr>
+       </table>
+    </div>
+    
+      <ul data-role="navbar" data-inset="true" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#regi">กลับสู่หน้าลงทะเบียน</a></li>
+          <li><a href="#register">แสดงใบชำระเงิน</a></li>
+      </ul>
+      </ul>
+    
+</div>
+
+<div id="regi" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <a href="main.html" data-icon="home" data-iconpos="notext"></a>
+      <h3 style="margin:0">ลงทะเบียนเรียน</h3>
+    </div>
+    
+        <div role="main" class="ui-content">
+        <label>ผลการลงทะเบียนเรียน</label>
+    <table width="100%" bgcolor="#FFFFFF" cellspacing="0">
+        <thead>
+          <tr bgcolor="#E0D9D9" >
+            <th class="first">รหัสวิชา</th>
+            <th class="second">ชื่อวิชา</th>
+            <th class="third">หน่วยกิต</th>
+            <th class="forth">ผลการลงทะเบียน</th>
+          </tr>
+        </thead>
+        
+         <tbody>
+                   <tr class="productitm3" align="center" height="40">
+
+            <td>บธ.6300</td>
+            <td>บัญชีบริหาร</td>
+            <td>3</td>
+            <th>ได้</td>
+          </tr>
+         </tbody>
+         
+         </table>
+         
+                  <p></p>
+               <table bgcolor="#FFFFFF" cellspacing="0">
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		หน่วยกิตรวม 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	6
+        </td>
+        </tr>
+        <tr height="25">
+        <td bgcolor="#E0D9D9">
+      		จำนวนเงินที่ต้องจ่าย 
+      	</td>
+      	<td>&nbsp;</td>
+      	<td width="40%">
+        	7800 บาท
+        </td>
+        </tr>
+       </table>
+    </div>
+    
+
+      <ul data-role="navbar" data-inset="true" data-inset="true" align="center">
+      <ul style="width: 88.5%">
+          <li><a href="#register">แสดงใบชำระเงิน</a></li>
+      </ul>
+      </ul>
+    
+    </div>
+
+
+</body>
+</html>
